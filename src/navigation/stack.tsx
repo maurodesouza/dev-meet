@@ -10,6 +10,9 @@ const StackNavigation = () => {
     <NavigationContainer>
       <Navigator screenOptions={{
         headerShown: false,
+        contentStyle: {
+          backgroundColor: 'transparent'
+        }
       }}>
         <Screen name="dashboard" component={Dashboard} />
         <Screen name="events" component={Events} />
