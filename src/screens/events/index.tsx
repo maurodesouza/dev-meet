@@ -1,9 +1,10 @@
+import { Text } from '../../components'
 import * as S from './styles'
 
 const Events = () => {
   return (
     <S.Container>
-      <S.Text>Events</S.Text>
+      <Text>Events</Text>
     </S.Container>
   )
 }
