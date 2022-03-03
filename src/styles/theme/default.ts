@@ -7,6 +7,7 @@ const theme = {
     gray: '#C6C6C6',
     gray300: '#BFBFBF',
     gray400: '#959595',
+    transparent: 'transparent'
   },
 
   fonts: {
