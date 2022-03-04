@@ -2,12 +2,15 @@ import { Event } from '../../types'
 import { Date, Organizer } from '..'
 
 import * as S from './styles'
+import { useNavigation } from '@react-navigation/native'
 
 type EventCardProps = Event
 
-const EventCard = ({ organizador, dataInicio, titulo, descricao }: EventCardProps) => {
+const EventCard = ({ organizador, dataInicio, titulo, descricao, id }: EventCardProps) => {
+  const navigation = useNavigation()
+
   return (
-    <S.Container>
+    <S.Container onPress={() => navigation.navigate('event' as never, { id } as never)}>
       <Date date={dataInicio} />
 
       <S.Title>{titulo}</S.Title>
