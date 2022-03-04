@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components/native'
 import { Text } from '../../components'
 
-export const Container = styled.View``
+export const Container = styled.View`
+  ${({ theme }) => css`
+    flex: 1;
+    padding: 0 ${theme.spacings.large}px;
+  `}
+`
 
 export const Title = styled(Text).attrs(() => ({
   size: 'xxlarge',
