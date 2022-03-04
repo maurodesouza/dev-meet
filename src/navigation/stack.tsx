@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Dashboard, Events } from '../screens'
+import { Dashboard, Events, Event } from '../screens'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
@@ -16,6 +16,7 @@ const StackNavigation = () => {
       }}>
         <Screen name="dashboard" component={Dashboard} />
         <Screen name="events" component={Events} />
+        <Screen name="event" component={Event} />
       </Navigator>
     </NavigationContainer>
   )
