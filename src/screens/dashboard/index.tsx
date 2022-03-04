@@ -1,7 +1,6 @@
 import { EventTypeCard } from '../../components'
 import { useFetch } from '../../hooks'
 
-import { Type } from '../../types'
 import * as S from './styles'
 
 const Dashboard = () => {
@@ -9,17 +8,16 @@ const Dashboard = () => {
 
   return (
     <S.Container>
+      <S.Wrapper>
         <S.Header>Que tipo de evento você procura?</S.Header>
         <S.Description>Selecione a categoria que{'\n'}mais te agrada!</S.Description>
+      </S.Wrapper>
 
-        <S.Contents
-          data={data?.types}
-          keyExtractor={item => String((item as Type).id)}
-          numColumns={2}
-          renderItem={({ item  }) => (
-            <EventTypeCard {...item as Type} />
-          )}
-        />
+      <S.Contents>
+        <S.WrapperContents>
+          {data?.types.map((type) => <EventTypeCard key={type.id} {...type} />)}
+        </S.WrapperContents>
+      </S.Contents>
     </S.Container>
   )
 }

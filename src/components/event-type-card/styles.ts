@@ -4,6 +4,7 @@ import { Text } from '../text'
 export const Container = styled.TouchableOpacity`
   ${({ theme }) => css`
     flex: 1;
+    flex-basis: 45%;
     background: ${theme.colors.white};
     margin: ${theme.spacings.xxsmall}px;
     aspect-ratio: 0.9;
