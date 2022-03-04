@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native'
 import { Text } from '../text'
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   ${({ theme }) => css`
     flex: 1;
     background: ${theme.colors.white};
