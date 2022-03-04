@@ -1,6 +1,7 @@
 export * from './status-bar'
 export * from './text'
 export * from './header'
+export * from './event-card'
 export * from './date'
 export * from './event-type-card'
 export * from './root'
