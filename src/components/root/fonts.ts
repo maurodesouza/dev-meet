@@ -7,7 +7,7 @@ import {
 } from '@expo-google-fonts/epilogue';
 
 import {
-  Rajdhani_400Regular,
+  Rajdhani_700Bold,
   Rajdhani_500Medium
 } from '@expo-google-fonts/rajdhani';
 
@@ -17,7 +17,7 @@ const fonts = {
   Epilogue_600SemiBold,
   Epilogue_700Bold,
   Epilogue_800ExtraBold,
-  Rajdhani_400Regular,
+  Rajdhani_700Bold,
   Rajdhani_500Medium
 }
 

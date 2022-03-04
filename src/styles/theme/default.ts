@@ -21,8 +21,8 @@ const theme = {
       },
 
       secondary: {
-        regular: 'Rajdhani_400Regular',
         medium: 'Rajdhani_500Medium',
+        bold: 'Rajdhani_700Bold',
       }
     },
 
