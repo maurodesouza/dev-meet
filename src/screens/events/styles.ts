@@ -2,7 +2,10 @@ import styled, { css } from 'styled-components/native'
 import { Text } from '../../components'
 
 export const Container = styled.View`
-  flex: 1;
+  ${({ theme }) => css`
+    flex: 1;
+    padding: 0 ${theme.spacings.large}px;
+  `}
 `
 
 export const Title = styled(Text).attrs(() => ({
@@ -20,6 +23,7 @@ export const Description = styled(Text).attrs(() => ({
   `}
 `
 
-export const Contents = styled.FlatList`
-  flex-shrink: 0;
+export const Contents = styled.ScrollView`
+  width: 100%;
+  height: 100%;
 `

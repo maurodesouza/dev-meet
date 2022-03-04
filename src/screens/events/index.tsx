@@ -3,7 +3,6 @@ import { useRoute, RouteProp } from '@react-navigation/native'
 import { Header, EventCard } from '../../components'
 import { useFetch } from '../../hooks'
 
-import { Event } from '../../types'
 import * as S from './styles'
 
 type Params = {
@@ -34,13 +33,9 @@ const Events = () => {
         Selecione o evento desejado.{'\n'}E espere sua data!
       </S.Description>
 
-      <S.Contents
-        data={findedEvents}
-        keyExtractor={item => (item as Event).id}
-        renderItem={({ item  }) => (
-          <EventCard {...item as Event} />
-        )}
-      />
+      <S.Contents>
+        {findedEvents.map(event => <EventCard key={event.id} {...event} />)}
+      </S.Contents>
     </S.Container>
   )
 }
