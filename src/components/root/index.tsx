@@ -6,6 +6,8 @@ import { theme } from '../../styles'
 import { StackNavigation } from '../../navigation'
 import { StatusBar } from '..'
 
+import { FetchProvider } from '../../context'
+
 import { fonts } from './fonts'
 import * as S from './styles'
 
@@ -16,7 +18,10 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <S.Container>
         <StatusBar />
-        <StackNavigation />
+
+        <FetchProvider>
+          <StackNavigation />
+        </FetchProvider>
       </S.Container>
     </ThemeProvider>
   ) : null
