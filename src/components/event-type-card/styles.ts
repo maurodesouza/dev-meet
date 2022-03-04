@@ -17,7 +17,7 @@ export const FakeImage = styled.View`
   ${({ theme }) => css`
     width: 37px;
     height: 37px;
-    margin-bottom: ${theme.spacings.small};
+    margin-bottom: ${theme.spacings.small}px;
     border-width: 1px;
     border-style: solid;
     border-color: red;
