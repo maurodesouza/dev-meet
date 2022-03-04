@@ -10,7 +10,7 @@ type OrganizerProps = OrganizerCustomProps & {
 }
 
 const DEFAULT_PROPS: Required<OrganizerCustomProps> = {
-  color: 'white',
+  color: 'bg',
   size: 'xxxsmall',
 }
 
