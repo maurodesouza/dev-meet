@@ -1,5 +1,5 @@
 import { Event } from '../../types'
-import { Date } from '..'
+import { Date, Organizer } from '..'
 
 import * as S from './styles'
 
@@ -14,12 +14,7 @@ const EventCard = ({ organizador, dataInicio, titulo, descricao }: EventCardProp
       <S.Description numberOfLines={3}>{descricao}</S.Description>
 
       <S.Footer>
-        <S.Organizer>
-          Organizado por:{' '}
-          <S.HighLight>
-            {organizador}
-          </S.HighLight>
-        </S.Organizer>
+        <Organizer>{organizador}</Organizer>
 
         <S.DetailButton>
           <S.Arrow>-{'>'}</S.Arrow>

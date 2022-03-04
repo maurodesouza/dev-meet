@@ -29,21 +29,10 @@ export const Description = styled(Text).attrs(() => ({
  `}
 `
 
-export const Organizer = styled(Text).attrs(() => ({
-  size: 'xxxsmall',
-  color: 'bg',
-  weight: 'medium',
-}))``
-
-export const HighLight = styled(Text).attrs(() => ({
-  size: 'xxxsmall',
-  color: 'bg',
-  weight: 'bold',
-}))``
-
 export const Footer = styled.View`
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const DetailButton = styled.TouchableOpacity`
