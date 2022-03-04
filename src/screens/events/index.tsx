@@ -1,11 +1,28 @@
+import { useRoute, RouteProp } from '@react-navigation/native'
+
 import { Header, EventCard } from '../../components'
 import { useFetch } from '../../hooks'
 
 import { Event } from '../../types'
 import * as S from './styles'
 
+type Params = {
+  events: {
+    id: number;
+  };
+};
+
 const Events = () => {
+  const { params } = useRoute<RouteProp<Params, 'events'>>()
   const { data } = useFetch()
+
+  const getSelectedEvents = () => {
+    const finded = data!.events.filter(event => event.tipoId === params!.id)
+
+    return finded
+  }
+
+  const findedEvents = getSelectedEvents()
 
   return (
     <S.Container>
@@ -18,7 +35,7 @@ const Events = () => {
       </S.Description>
 
       <S.Contents
-        data={data?.events}
+        data={findedEvents}
         keyExtractor={item => (item as Event).id}
         renderItem={({ item  }) => (
           <EventCard {...item as Event} />

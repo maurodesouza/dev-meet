@@ -20,7 +20,7 @@ const EventTypeCard = ({ id, text }: EventTypeCardProps) => {
   const count = countEvents()
 
   return (
-    <S.Container onPress={() => navigation.navigate('events' as any)}>
+    <S.Container onPress={() => navigation.navigate('events' as never, { id } as never)}>
       <S.FakeImage />
 
       <S.Label>{text}</S.Label>
