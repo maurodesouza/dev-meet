@@ -5,13 +5,14 @@ import * as S from './styles'
 
 type HeaderProps = {
   children: React.ReactNode
+  align?: 'flex-start' | 'center'
 }
 
-const Header = ({ children }: HeaderProps) => {
+const Header = ({ children, align = 'flex-start' }: HeaderProps) => {
   const navigation = useNavigation()
 
   return (
-    <S.Container>
+    <S.Container align={align}>
       <S.Wrapper>
         {children}
       </S.Wrapper>

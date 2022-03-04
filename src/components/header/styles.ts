@@ -1,8 +1,16 @@
 import styled, { css } from 'styled-components/native'
 
-export const Container = styled.View`
-  flex-direction: row;
-  justify-content: space-between;
+type ContainerProps = {
+  align: 'flex-start' | 'center'
+}
+
+export const Container = styled.View<ContainerProps>`
+  ${({ align }) => css`
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: ${align};
+  `}
+
 `
 
 export const Wrapper = styled.View``
