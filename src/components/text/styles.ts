@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native'
-import { TextProps } from '.'
+import { CustomProps } from '.'
 
-type ContainerProps = Required<Omit<TextProps, 'children'>>
+type ContainerProps = Required<CustomProps>
 
 export const Container = styled.Text<ContainerProps>`
   ${({ theme, color, family, weight, size, bg, lineHeight }) => css`
