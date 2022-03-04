@@ -39,6 +39,18 @@ const theme = {
       xxxxlarge: 40,
     }
   },
+
+
+  spacings: {
+    xxsmall: 8,
+    xsmall: 14,
+    small: 16,
+    medium: 24,
+    large: 32,
+    xlarge: 42,
+    xxlarge: 56,
+    xxxlarge: 80,
+  }
 }
 
 export { theme }
