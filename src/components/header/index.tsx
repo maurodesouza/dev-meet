@@ -1,5 +1,4 @@
 import { useNavigation } from '@react-navigation/native'
-import { Text } from '../../components'
 
 import * as S from './styles'
 
@@ -18,7 +17,9 @@ const Header = ({ children, align = 'flex-start' }: HeaderProps) => {
       </S.Wrapper>
 
       <S.BackButton onPress={navigation.goBack}>
-        <Text color="gray300">Voltar</Text>
+        <S.Icon name="arrow-left" />
+
+        <S.Label>Voltar</S.Label>
       </S.BackButton>
     </S.Container>
   )
