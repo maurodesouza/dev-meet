@@ -34,20 +34,3 @@ export const Footer = styled.View`
   justify-content: space-between;
   align-items: center;
 `
-
-export const DetailButton = styled.TouchableOpacity`
-  flex-direction: row;
-  justify-content: space-between;
-`
-
-
-export const Arrow = styled(Text).attrs(() => ({
-  size: 'small',
-  color: 'primary',
-  weight: 'bold',
-}))``
-
-
-
-
-
