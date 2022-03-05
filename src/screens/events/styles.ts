@@ -27,3 +27,15 @@ export const Contents = styled.ScrollView`
   width: 100%;
   height: 100%;
 `
+
+export const Label = styled(Text).attrs(() => ({
+  size: 'xsmall',
+  weight: 'medium',
+  color: 'gray300',
+}))`
+  ${({ theme }) => css`
+    text-align: center;
+    margin-left: ${theme.spacings.xxsmall / 2}px;
+    padding-bottom: ${theme.spacings.large}px;
+  `}
+`

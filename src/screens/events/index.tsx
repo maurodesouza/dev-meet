@@ -35,6 +35,8 @@ const Events = () => {
 
       <S.Contents>
         {findedEvents.map(event => <EventCard key={event.id} {...event} />)}
+
+        <S.Label>Sem mais eventos...</S.Label>
       </S.Contents>
     </S.Container>
   )
