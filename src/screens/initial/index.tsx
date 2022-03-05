@@ -18,7 +18,7 @@ const Initial = () => {
   const canProceed = () => {
     if (isLoading || isWaiting) return;
 
-    navigation.navigate('dashboard' as never)
+    navigation.navigate('greating' as never)
   }
 
   useEffect(() => {
