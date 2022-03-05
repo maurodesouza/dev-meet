@@ -23,7 +23,9 @@ export const Description = styled(Text).attrs(() => ({
   `}
 `
 
-export const Contents = styled.ScrollView`
+export const Contents = styled.ScrollView.attrs(() => ({
+  showsVerticalScrollIndicator: false
+}))`
   width: 100%;
   height: 100%;
 `

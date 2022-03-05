@@ -29,7 +29,9 @@ export const Description = styled(Text).attrs(() => ({
   `}
 `
 
-export const Contents = styled.ScrollView`
+export const Contents = styled.ScrollView.attrs(() => ({
+  showsVerticalScrollIndicator: false
+}))`
   ${({ theme }) => css`
     padding: 0 ${theme.spacings.large -theme.spacings.xxsmall}px;
   `}
