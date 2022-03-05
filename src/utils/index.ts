@@ -1,1 +1,1 @@
-export * from './getIconUrl'
+export * from './getCdnImage'
