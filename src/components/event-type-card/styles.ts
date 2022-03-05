@@ -26,22 +26,15 @@ export const Container = styled.TouchableOpacity<SharedProps>`
   `}
 `
 
-export const FakeImage = styled.View`
-  ${({ theme }) => css`
-    width: 37px;
-    height: 37px;
-    margin-bottom: ${theme.spacings.small}px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: red;
-  `}
-`
-
 export const Label = styled(Text).attrs(({ selected }: SharedProps) => ({
   color: selected ? 'white' : 'bg',
   weight: 'medium',
   size: 'small'
-}))``
+}))`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.medium}px;
+  `}
+`
 
 
 export const Highlight = styled(Text).attrs(({ selected }: SharedProps) => ({

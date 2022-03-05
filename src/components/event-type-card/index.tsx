@@ -1,15 +1,17 @@
 import { TouchableOpacityProps } from 'react-native'
+import { SvgUri } from "react-native-svg";
 
 import { useFetch } from '../../hooks'
-import { Type } from '../../types'
+import { getIconUrl } from '../../utils';
 
+import { Type } from '../../types'
 import * as S from './styles'
 
 type EventTypeCardProps = Type & TouchableOpacityProps & {
   selected: boolean
 }
 
-const EventTypeCard = ({ id, text, selected, ...rest }: EventTypeCardProps) => {
+const EventTypeCard = ({ id, text, icon, selected, ...rest }: EventTypeCardProps) => {
   const { data } = useFetch()
 
   const countEvents = () => {
@@ -21,9 +23,11 @@ const EventTypeCard = ({ id, text, selected, ...rest }: EventTypeCardProps) => {
   const count = countEvents()
   const props = { selected }
 
+  const variant = selected ? 'white' : 'orange'
+
   return (
     <S.Container activeOpacity={1} {...props} {...rest}>
-      <S.FakeImage />
+      <SvgUri uri={getIconUrl(icon, variant)} />
 
       <S.Label {...props} >{text}</S.Label>
 
