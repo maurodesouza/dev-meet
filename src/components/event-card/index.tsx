@@ -10,7 +10,7 @@ const EventCard = ({ organizador, dataInicio, titulo, descricao, id }: EventCard
   const navigation = useNavigation()
 
   return (
-    <S.Container onPress={() => navigation.navigate('event' as never, { id } as never)}>
+    <S.Container activeOpacity={0.8} onPress={() => navigation.navigate('event' as never, { id } as never)}>
       <Date date={dataInicio} />
 
       <S.Title>{titulo}</S.Title>
