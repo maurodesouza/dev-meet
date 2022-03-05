@@ -14,19 +14,13 @@ export const Title = styled(Text).attrs(() => ({
   weight: 'extra_bold',
 }))`
   ${({ theme }) => css`
-    margin-top: ${theme.spacings.large}px;
     margin-bottom: ${theme.spacings.small}px;
   `}
 `
 
-export const Description = styled(Text).attrs(() => ({
-  size: 'xsmall',
-  color: 'gray400',
-  lineHeight: 2,
-}))`
+export const Wrapper = styled.View`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.large}px;
+    margin-top: ${theme.spacings.large}px;
+    margin-bottom: ${theme.spacings.xlarge}px;
   `}
 `
-
-

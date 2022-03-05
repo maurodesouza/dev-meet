@@ -1,5 +1,5 @@
 import { RouteProp, useRoute } from '@react-navigation/core'
-import { Date, Header, Organizer } from '../../components';
+import { Date, Header, Organizer, LongText } from '../../components';
 
 import { useFetch } from '../../hooks';
 import * as S from './styles'
@@ -29,8 +29,10 @@ const Event = () => {
         <Date direction="column" size="xlarge" date={event.dataInicio} />
       </Header>
 
-      <S.Title>{event.titulo}</S.Title>
-      <S.Description>{event.descricao}</S.Description>
+      <S.Wrapper>
+        <S.Title>{event.titulo}</S.Title>
+        <LongText>{event.descricao}</LongText>
+      </S.Wrapper>
 
       <Organizer color="white" size="xxsmall" >{event.organizador}</Organizer>
     </S.Container>
