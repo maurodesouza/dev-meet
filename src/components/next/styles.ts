@@ -35,7 +35,5 @@ export const Wrapper = styled.View<WrapperProps>`
   `}
 `
 
-export const Icon = styled(Feather).attrs(({ theme }) => ({
-  color: theme.colors.white
-}))``
+export const Icon = styled(Feather)``
 

@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultTheme, useTheme } from 'styled-components'
 import { TouchableOpacityProps } from 'react-native'
 
 import * as S from './styles'
@@ -11,6 +11,8 @@ type NextProps = TouchableOpacityProps & {
 }
 
 const Next = ({ showLabel = false, arrowBg = 'primary', arrowColor = 'white', iconSize = 48, ...rest }: NextProps) => {
+  const theme = useTheme()
+
   return (
     <S.Container {...rest}>
       {showLabel && <S.Label>Próximo</S.Label>}
@@ -18,7 +20,7 @@ const Next = ({ showLabel = false, arrowBg = 'primary', arrowColor = 'white', ic
       <S.Wrapper bg={arrowBg} size={iconSize}>
         <S.Icon
           name="arrow-right"
-          color={arrowColor}
+          color={theme.colors[arrowColor]}
           size={iconSize / 2}
         />
       </S.Wrapper>
