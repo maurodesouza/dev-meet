@@ -24,6 +24,7 @@ const theme = {
 
       secondary: {
         medium: 'Rajdhani_500Medium',
+        semi_bold: 'Rajdhani_600SemiBold',
         bold: 'Rajdhani_700Bold',
       }
     },
