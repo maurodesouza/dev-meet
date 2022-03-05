@@ -31,17 +31,21 @@ export const Description = styled(Text).attrs(() => ({
 
 export const Contents = styled.ScrollView`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
     padding: 0 ${theme.spacings.large -theme.spacings.xxsmall}px;
   `}
 `
 
 export const WrapperContents = styled.View`
-  width: 100%;
-  height: 100%;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   flex: 1;
+`
+
+export const Footer = styled.View`
+  ${({ theme }) => css`
+    flex-shrink: 0;
+    padding: ${theme.spacings.large}px 0;
+    align-items: flex-end;
+  `}
 `

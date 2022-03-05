@@ -1,10 +1,26 @@
-import { EventTypeCard } from '../../components'
+import { useState } from 'react'
+import { TouchableOpacity } from 'react-native'
+
+import { useNavigation } from '@react-navigation/native'
+
+import { EventTypeCard, Text } from '../../components'
 import { useFetch } from '../../hooks'
 
 import * as S from './styles'
 
 const Dashboard = () => {
   const { data } = useFetch()
+  const navigation = useNavigation()
+
+  const [selected, setSelected] = useState<number>()
+
+  const handleSelect = (id: number) => () => {
+    setSelected(state => state === id ? undefined : id)
+  }
+
+  const handleGoToEvents = () => {
+    navigation.navigate('events' as never, { id: selected } as never)
+  }
 
   return (
     <S.Container>
@@ -15,9 +31,25 @@ const Dashboard = () => {
 
       <S.Contents>
         <S.WrapperContents>
-          {data?.types.map((type) => <EventTypeCard key={type.id} {...type} />)}
+          {data?.types.map((type) => (
+            <EventTypeCard
+              key={type.id}
+              selected={selected === type.id}
+              {...type}
+              onPress={handleSelect(type.id)} />
+          ))}
         </S.WrapperContents>
       </S.Contents>
+
+      {!!selected && (
+        <S.Wrapper>
+          <S.Footer>
+            <TouchableOpacity onPress={handleGoToEvents}>
+              <Text>Proximo!</Text>
+            </TouchableOpacity>
+          </S.Footer>
+        </S.Wrapper>
+      )}
     </S.Container>
   )
 }

@@ -1,14 +1,15 @@
-import { useNavigation } from '@react-navigation/native'
+import { TouchableOpacityProps } from 'react-native'
 
 import { useFetch } from '../../hooks'
 import { Type } from '../../types'
 
 import * as S from './styles'
 
-type EventTypeCardProps = Type
+type EventTypeCardProps = Type & TouchableOpacityProps & {
+  selected: boolean
+}
 
-const EventTypeCard = ({ id, text }: EventTypeCardProps) => {
-  const navigation = useNavigation()
+const EventTypeCard = ({ id, text, selected, ...rest }: EventTypeCardProps) => {
   const { data } = useFetch()
 
   const countEvents = () => {
@@ -18,15 +19,16 @@ const EventTypeCard = ({ id, text }: EventTypeCardProps) => {
   }
 
   const count = countEvents()
+  const props = { selected }
 
   return (
-    <S.Container onPress={() => navigation.navigate('events' as never, { id } as never)}>
+    <S.Container activeOpacity={1} {...props} {...rest}>
       <S.FakeImage />
 
-      <S.Label>{text}</S.Label>
+      <S.Label {...props} >{text}</S.Label>
 
-      <S.Events>
-        <S.Highlight>
+      <S.Events {...props} >
+        <S.Highlight {...props} >
           {count} eventos
         </S.Highlight>
         {' '}
