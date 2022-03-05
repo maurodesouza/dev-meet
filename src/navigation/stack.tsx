@@ -1,23 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Dashboard, Events, Event, Greating } from '../screens'
+import * as screens from '../screens'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
 const StackNavigation = () => {
   return (
     <NavigationContainer>
-      <Navigator screenOptions={{
+      <Navigator
+      initialRouteName="initial"
+      screenOptions={{
         headerShown: false,
         contentStyle: {
           backgroundColor: 'transparent'
         }
       }}>
-        <Screen name="grating" component={Greating} />
-        <Screen name="dashboard" component={Dashboard} />
-        <Screen name="events" component={Events} />
-        <Screen name="event" component={Event} />
+        {Object.entries(screens).map(([screen, View]) => {
+          const name = screen.toLocaleLowerCase()
+
+          return <Screen key={name} name={name} component={View} />
+        })}
       </Navigator>
     </NavigationContainer>
   )
