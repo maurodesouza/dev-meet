@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Dashboard, Events, Event } from '../screens'
+import { Dashboard, Events, Event, Greating } from '../screens'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
@@ -14,6 +14,7 @@ const StackNavigation = () => {
           backgroundColor: 'transparent'
         }
       }}>
+        <Screen name="grating" component={Greating} />
         <Screen name="dashboard" component={Dashboard} />
         <Screen name="events" component={Events} />
         <Screen name="event" component={Event} />
