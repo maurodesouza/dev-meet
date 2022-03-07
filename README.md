@@ -52,7 +52,9 @@ Para fazer o app utilizei o [Expo](https://nextjs.org) + [Typescript](https://ww
 
 ## :sparkles: Demo ##
 
-https://user-images.githubusercontent.com/54520907/157106229-985c4240-6d79-40d0-ba79-c3846a6a591c.mp4
+<div align="center">
+  <video src="https://user-images.githubusercontent.com/54520907/157106229-985c4240-6d79-40d0-ba79-c3846a6a591c.mp4" />
+ </div>
 
 ## :rocket: Tecnologias ##
 
