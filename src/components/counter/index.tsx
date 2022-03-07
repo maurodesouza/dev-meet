@@ -14,12 +14,13 @@ type Interval = {
 type CounterProps = {
   dateCreated: string
   dateStart: string
+  onFinishCounter: () => void
 }
 
 const intervalsToUse: (keyof Duration)[] = ['years', 'months', 'days', 'hours', 'minutes', 'seconds']
 const intervalsCount = 3
 
-const Counter = ({ dateCreated, dateStart }: CounterProps) => {
+const Counter = ({ dateCreated, dateStart, onFinishCounter }: CounterProps) => {
   const startDate = new Date(dateStart).getTime()
   const createdDate = new Date(dateCreated).getTime()
 
@@ -28,7 +29,7 @@ const Counter = ({ dateCreated, dateStart }: CounterProps) => {
 
   expiryTimestamp.setMilliseconds(expiryTimestamp.getMilliseconds() + startDate - now)
 
-  const counter = useTimer({ expiryTimestamp, autoStart: false })
+  const counter = useTimer({ expiryTimestamp, autoStart: false, onExpire: onFinishCounter })
   const { forceUpdate } = useForceUpdate()
 
   const hasSecondsRef = useRef(false)

@@ -1,7 +1,7 @@
 import { RouteProp, useRoute } from '@react-navigation/core'
 import { Date as DateComponent, Header, Organizer, EventLink, LongText, EventStatus } from '../../components';
 
-import { useFetch } from '../../hooks';
+import { useFetch, useForceUpdate } from '../../hooks';
 import * as S from './styles'
 
 type Params = {
@@ -13,6 +13,8 @@ type Params = {
 
 const Event = () => {
   const { params } = useRoute<RouteProp<Params, 'events'>>()
+
+  const { forceUpdate } = useForceUpdate()
   const { data } = useFetch()
 
   const getEvent = () => {
@@ -58,7 +60,7 @@ const Event = () => {
 
       <S.Footer>
         {status !== 'already-happened' && <S.EventLinkWrapper><EventLink link={event.link} /></S.EventLinkWrapper>}
-        <EventStatus status={status} dateStart={event.dataInicio} dateCreated={event.dataPublicacao} />
+        <EventStatus status={status} dateStart={event.dataInicio} dateCreated={event.dataPublicacao} onFinishCounter={forceUpdate} />
       </S.Footer>
     </S.Container>
   )
