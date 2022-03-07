@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/native'
-import { SvgUri } from "react-native-svg";
 
 export const Container = styled.View`
   ${({ theme }) => css`
@@ -19,3 +18,5 @@ export const Wrapper = styled.View`
   height: 100%;
   width: 100%;
 `
+
+export const Image = styled.Image``

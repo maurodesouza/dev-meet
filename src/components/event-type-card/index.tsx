@@ -1,10 +1,9 @@
 import { TouchableOpacityProps } from 'react-native'
-import { SvgUri } from "react-native-svg";
 
 import { useFetch } from '../../hooks'
-import { getCdnImage } from '../../utils';
-
 import { Type } from '../../types'
+
+import { icons } from './icons'
 import * as S from './styles'
 
 type EventTypeCardProps = Type & TouchableOpacityProps & {
@@ -24,11 +23,10 @@ const EventTypeCard = ({ id, text, icon, selected, ...rest }: EventTypeCardProps
   const props = { selected }
 
   const variant = selected ? 'white' : 'orange'
-  const iconPath = `${icon}/${variant}`
 
   return (
     <S.Container activeOpacity={1} {...props} {...rest}>
-      <SvgUri uri={getCdnImage(iconPath)} />
+      {icons[icon][variant]}
 
       <S.Label {...props} >{text}</S.Label>
 

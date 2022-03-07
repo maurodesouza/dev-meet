@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 
-import { SvgUri } from "react-native-svg";
 import { useNavigation } from "@react-navigation/native";
 
-import { useFetch } from "../../hooks";
-import { getCdnImage } from "../../utils";
-
-import * as S from './styles'
 import { Pattern } from "../../components";
+import { useFetch } from "../../hooks";
+
+import Logo from '../../assets/logo.svg'
+import * as S from './styles'
 
 const Initial = () => {
   const navigation = useNavigation()
@@ -35,7 +34,7 @@ const Initial = () => {
         <Pattern />
       </S.Wrapper>
 
-      <SvgUri uri={getCdnImage('logo')} />
+      <Logo />
     </S.Container>
   )
 }
