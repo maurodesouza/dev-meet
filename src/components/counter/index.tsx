@@ -88,7 +88,7 @@ const Counter = ({ dateCreated, dateStart, onFinishCounter }: CounterProps) => {
 
           return (
           <S.Wrapper key={label}>
-            <S.Time>{display}</S.Time>
+            <S.Time>{`0${display}`.slice(-2)}</S.Time>
             <S.Label>{label}</S.Label>
           </S.Wrapper>
         )})}
