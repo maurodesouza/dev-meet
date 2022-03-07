@@ -22,6 +22,7 @@ export const Wrapper = styled.View`
     padding: ${theme.spacings.small}px;
     border-radius: 6px;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   `}
 `
@@ -37,5 +38,12 @@ export const Actions = styled.View`
   ${({ theme }) => css`
     margin-left: ${theme.spacings.small}px;
     flex-shrink: 0;
+    flex-direction: row;
+  `}
+`
+
+export const Action = styled.View`
+  ${({ theme }) => css`
+    margin-left: ${theme.spacings.xsmall}px;
   `}
 `
