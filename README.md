@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
+  <a href="#sparkles-demo">Demo</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-pré-requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
@@ -48,6 +49,8 @@ O desafio consiste em criar um pequeno app para consumir uma api fake que fornec
 <br>
 
 Para fazer o app utilizei o [Expo](https://nextjs.org) + [Typescript](https://www.typescriptlang.org) ❤
+
+## :sparkles: Demo ##
 
 https://user-images.githubusercontent.com/54520907/157106229-985c4240-6d79-40d0-ba79-c3846a6a591c.mp4
 
