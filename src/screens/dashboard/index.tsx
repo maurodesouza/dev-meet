@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useSharedValue, useAnimatedStyle, interpolate, withTiming } from 'react-native-reanimated'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useIsFocused } from '@react-navigation/native'
 
 import { EventTypeCard, Icon } from '../../components'
 import { useFetch } from '../../hooks'
@@ -12,6 +12,7 @@ const Dashboard = () => {
   const { data } = useFetch()
   const navigation = useNavigation()
 
+  const isFocused = useIsFocused()
   const [selected, setSelected] = useState<number>()
 
   const handleSelect = (id: number) => () => {
@@ -51,6 +52,11 @@ const Dashboard = () => {
     height: footerHeight.value,
     opacity: interpolate(footerHeight.value, [0, 60, 100], [0, 0, 1]),
   }));
+
+  useEffect(() => {
+    setSelected(undefined)
+    closeFooter()
+  }, [isFocused])
 
   return (
     <S.Container>
