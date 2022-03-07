@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from 'styled-components/native'
 import { Feather } from "@expo/vector-icons";
 
-import { Text } from '../../components'
+import { Text } from '..'
 
 export const Container = styled.TouchableOpacity`
   flex-direction: row;

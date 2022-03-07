@@ -1,5 +1,5 @@
 import { Event } from '../../types'
-import { Date, Next, Organizer } from '..'
+import { Date, Icon, Organizer } from '..'
 
 import * as S from './styles'
 import { useNavigation } from '@react-navigation/native'
@@ -19,7 +19,7 @@ const EventCard = ({ organizador, dataInicio, titulo, descricao, id }: EventCard
       <S.Footer>
         <Organizer>{organizador}</Organizer>
 
-        <Next arrowBg="transparent" arrowColor="primary" iconSize={28} />
+        <Icon iconBg="transparent" iconColor="primary" iconSize={28} />
       </S.Footer>
     </S.Container>
   )

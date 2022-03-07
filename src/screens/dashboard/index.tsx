@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
 
-import { EventTypeCard, Next, Text } from '../../components'
+import { EventTypeCard, Icon } from '../../components'
 import { useFetch } from '../../hooks'
 
 import * as S from './styles'
@@ -44,7 +44,7 @@ const Dashboard = () => {
       {!!selected && (
         <S.Wrapper>
           <S.Footer>
-            <Next arrowBg="secondary" iconSize={40} onPress={handleGoToEvents} showLabel />
+            <Icon iconBg="secondary" iconSize={40} onPress={handleGoToEvents} showLabel />
           </S.Footer>
         </S.Wrapper>
       )}

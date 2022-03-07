@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { SvgUri } from "react-native-svg";
 
-import { Next } from "../../components";
+import { Icon } from "../../components";
 import { getCdnImage } from "../../utils";
 
 import * as S from './styles'
@@ -26,7 +26,7 @@ const Greating = () => {
 
       <SvgUri uri={getCdnImage('greating-hero')} />
 
-      <Next onPress={() => navigation.navigate('dashboard' as never)} />
+      <Icon onPress={() => navigation.navigate('dashboard' as never)} />
     </S.Container>
   )
 }
