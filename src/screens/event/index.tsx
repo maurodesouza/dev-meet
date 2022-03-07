@@ -1,5 +1,5 @@
 import { RouteProp, useRoute } from '@react-navigation/core'
-import { Date, Header, Organizer, EventLink, LongText, TimeToEvent } from '../../components';
+import { Date as DateComponent, Header, Organizer, EventLink, LongText, EventStatus } from '../../components';
 
 import { useFetch } from '../../hooks';
 import * as S from './styles'
@@ -21,12 +21,30 @@ const Event = () => {
     return finded
   }
 
+  const getEventStatus = () => {
+    const dateStartInMilliseconds = new Date(event.dataInicio).getTime()
+    const nowInMilliseconds = new Date().getTime()
+
+    const eventDuration = 1000 * 60 * 30 * 3 // 1h 30m
+
+    const timeWithEventDuration = dateStartInMilliseconds + eventDuration
+
+    const willHappen = nowInMilliseconds < dateStartInMilliseconds
+    const alreadyHappened = nowInMilliseconds > timeWithEventDuration
+
+    if (willHappen) return 'will-happen'
+    if (alreadyHappened) return 'already-happened'
+
+    return 'is-happening'
+  }
+
   const event = getEvent()
+  const status = getEventStatus()
 
   return (
     <S.Container>
       <Header align="center">
-        <Date direction="column" size="xlarge" date={event.dataInicio} />
+        <DateComponent direction="column" size="xlarge" date={event.dataInicio} />
       </Header>
 
       <S.Wrapper>
