@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'styled-components'
 import { TextProps as NativeTextProps } from 'react-native'
+import { StyleProps } from 'react-native-reanimated'
 
 import * as S from './styles'
 
@@ -16,7 +17,7 @@ export type CustomProps = {
   lineHeight?: number
 }
 
-type TextProps = NativeTextProps & CustomProps & {
+type TextProps = NativeTextProps & CustomProps & StyleProps & {
   children: React.ReactNode
 }
 

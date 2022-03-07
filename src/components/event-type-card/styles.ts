@@ -1,33 +1,55 @@
 import styled, { css, DefaultTheme } from 'styled-components/native'
+import Animated from 'react-native-reanimated'
+
 import { Text } from '../text'
 
-type SharedProps = {
-  selected: boolean
-}
-
-const containerModifiers = {
-  selected: (theme: DefaultTheme) => css`
-    background: ${theme.colors.primary};
-  `,
-}
-
-export const Container = styled.TouchableOpacity<SharedProps>`
-  ${({ theme, selected }) => css`
+export const Container = styled.TouchableOpacity`
+  ${({ theme }) => css`
     flex: 1;
     flex-basis: 45%;
-    background: ${theme.colors.white};
     margin: ${theme.spacings.xxsmall}px;
     aspect-ratio: 0.9;
-    padding: ${theme.spacings.xsmall}px;
-    padding-right: ${theme.spacings.xsmall - 2}px;
     border-radius: 10px;
-
-    ${selected && containerModifiers.selected(theme)}
+    position: relative;
+    overflow: hidden;
   `}
 `
 
-export const Label = styled(Text).attrs(({ selected }: SharedProps) => ({
-  color: selected ? 'white' : 'bg',
+export const Wrapper = styled(Animated.View)`
+  ${({ theme }) => css`
+    flex: 1;
+    padding: ${theme.spacings.xsmall}px;
+    padding-right: ${theme.spacings.xsmall - 2}px;
+  `}
+`
+
+export const Overlay = styled(Animated.View)`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+`
+
+
+export const Background = styled(Animated.View)`
+  ${({ theme }) => css`
+    flex: 1;
+    background: ${theme.colors.white};
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  `}
+`
+
+export const Label = styled(Text).attrs(() => ({
   weight: 'medium',
   size: 'small'
 }))`
@@ -36,16 +58,12 @@ export const Label = styled(Text).attrs(({ selected }: SharedProps) => ({
   `}
 `
 
-
-export const Highlight = styled(Text).attrs(({ selected }: SharedProps) => ({
-  color: selected ? 'white' : 'primary',
+export const Highlight = styled(Text).attrs(() => ({
   weight: 'semi_bold',
   size: 'xxsmall'
 }))``
 
-
-export const Events = styled(Text).attrs(({ selected }: SharedProps) => ({
-  color: selected ? 'white' : 'primary',
+export const Events = styled(Text).attrs(() => ({
   weight: 'regular',
   size: 'xxsmall'
 }))`

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { useSharedValue, useAnimatedStyle, interpolate, withTiming, Extrapolate } from 'react-native-reanimated'
+import { useSharedValue, useAnimatedStyle, interpolate, withTiming } from 'react-native-reanimated'
 import { useNavigation } from '@react-navigation/native'
 
 import { EventTypeCard, Icon } from '../../components'
@@ -65,6 +65,7 @@ const Dashboard = () => {
             <EventTypeCard
               key={type.id}
               selected={selected === type.id}
+              hasSomeSelected={!!selected}
               {...type}
               onPress={handleSelect(type.id)} />
           ))}

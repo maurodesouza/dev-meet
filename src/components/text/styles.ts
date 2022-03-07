@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components/native'
+import Animated from 'react-native-reanimated'
+
 import { CustomProps } from '.'
 
 type ContainerProps = Required<CustomProps>
 
-export const Container = styled.Text<ContainerProps>`
+export const Container = styled(Animated.Text)<ContainerProps>`
   ${({ theme, color, family, weight, size, bg, lineHeight }) => css`
     color: ${theme.colors[color]};
     background: ${theme.colors[bg]};
