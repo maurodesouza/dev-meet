@@ -9,7 +9,8 @@ const theme = {
     gray400: '#959595',
     gray800: '#383838',
     gray900: '#2e2e2e',
-    transparent: 'transparent'
+    transparent: 'transparent',
+    error: '#F00'
   },
 
   font: {
