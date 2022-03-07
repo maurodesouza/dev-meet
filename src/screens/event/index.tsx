@@ -47,17 +47,19 @@ const Event = () => {
         <DateComponent direction="column" size="xlarge" date={event.dataInicio} />
       </Header>
 
-      <S.Wrapper>
+      <S.Scrollable>
         <S.Title>{event.titulo}</S.Title>
         <LongText>{event.descricao}</LongText>
-      </S.Wrapper>
 
-      <Organizer color="white" size="xxsmall" >{event.organizador}</Organizer>
-      <S.Wrapper>
-        <EventLink link={event.link} />
-      </S.Wrapper>
+        <S.OrganizerWrapper>
+          <Organizer color="white" size="xxsmall" >{event.organizador}</Organizer>
+        </S.OrganizerWrapper>
+      </S.Scrollable>
 
-      <TimeToEvent dateStart={event.dataInicio} dateCreated={event.dataPublicacao} />
+      <S.Footer>
+        {status !== 'already-happened' && <S.EventLinkWrapper><EventLink link={event.link} /></S.EventLinkWrapper>}
+        <EventStatus status={status} dateStart={event.dataInicio} dateCreated={event.dataPublicacao} />
+      </S.Footer>
     </S.Container>
   )
 }

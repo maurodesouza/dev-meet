@@ -18,9 +18,27 @@ export const Title = styled(Text).attrs(() => ({
   `}
 `
 
-export const Wrapper = styled.View`
+export const OrganizerWrapper = styled.View`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.large}px;
     margin-bottom: ${theme.spacings.xlarge}px;
   `}
 `
+
+export const EventLinkWrapper = styled.View`
+  ${({ theme }) => css`
+    margin-bottom: ${theme.spacings.medium}px;
+  `}
+`
+
+export const Scrollable = styled.ScrollView.attrs(() => ({
+  showsVerticalScrollIndicator: false
+}))`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large}px;
+    margin-bottom: ${theme.spacings.small}px;
+  `}
+`
+
+export const Footer = styled.View``
+
