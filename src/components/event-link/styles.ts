@@ -32,7 +32,10 @@ export const Link = styled(Text).attrs(() => ({
   weight: 'semi_bold',
   size: 'medium',
   family: 'secondary',
-}))``
+  numberOfLines: 1,
+}))`
+  flex: 1;
+`
 
 export const Actions = styled.View`
   ${({ theme }) => css`
