@@ -1,3 +1,5 @@
+<br />
+
 <div align="center" id="top">
   <img src="./.github/assets/brand.svg" alt="Dev Meet" />
 
@@ -24,8 +26,6 @@
   <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
   <a href="https://github.com/maurodesouza" target="_blank">Autor</a>
 </p>
-
-<br>
 
 ## :dart: Sobre ##
 
