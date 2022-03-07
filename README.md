@@ -6,8 +6,6 @@
   &#xa0;
 </div>
 
-<h1 align="center">Dev Meet</h1>
-
 <p align="center">
   <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/maurodesouza/dev-meet?color=FF5100">
 
