@@ -1,5 +1,5 @@
 import { RouteProp, useRoute } from '@react-navigation/core'
-import { Date, Header, Organizer, EventLink, LongText } from '../../components';
+import { Date, Header, Organizer, EventLink, LongText, TimeToEvent } from '../../components';
 
 import { useFetch } from '../../hooks';
 import * as S from './styles'
@@ -38,6 +38,8 @@ const Event = () => {
       <S.Wrapper>
         <EventLink link={event.link} />
       </S.Wrapper>
+
+      <TimeToEvent dateStart={event.dataInicio} dateCreated={event.dataPublicacao} />
     </S.Container>
   )
 }
