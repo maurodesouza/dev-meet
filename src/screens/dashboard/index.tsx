@@ -1,4 +1,6 @@
 import { useState } from 'react'
+
+import { useSharedValue, useAnimatedStyle, interpolate, withTiming, Extrapolate } from 'react-native-reanimated'
 import { useNavigation } from '@react-navigation/native'
 
 import { EventTypeCard, Icon } from '../../components'
@@ -13,12 +15,42 @@ const Dashboard = () => {
   const [selected, setSelected] = useState<number>()
 
   const handleSelect = (id: number) => () => {
-    setSelected(state => state === id ? undefined : id)
+    const newState = selected === id ? undefined : id
+
+    if (!newState) closeFooter()
+    if (!selected) openFooter()
+
+    setSelected(newState)
   }
 
   const handleGoToEvents = () => {
     navigation.navigate('events' as never, { id: selected } as never)
   }
+
+  const footerHeight = useSharedValue(0);
+
+  const openFooter = () => {
+    footerHeight.value = withTiming(
+      100,
+      {
+        duration: 250,
+      },
+    );
+  };
+
+  const closeFooter = () => {
+    footerHeight.value = withTiming(
+      0,
+      {
+        duration: 250,
+      },
+    );
+  };
+
+  const footerAnimations = useAnimatedStyle(() => ({
+    height: footerHeight.value,
+    opacity: interpolate(footerHeight.value, [0, 60, 100], [0, 0, 1]),
+  }));
 
   return (
     <S.Container>
@@ -39,13 +71,11 @@ const Dashboard = () => {
         </S.WrapperContents>
       </S.Contents>
 
-      {!!selected && (
-        <S.Wrapper>
-          <S.Footer>
-            <Icon iconBg="secondary" iconSize={40} onPress={handleGoToEvents} showLabel />
-          </S.Footer>
-        </S.Wrapper>
-      )}
+      <S.Wrapper style={footerAnimations}>
+        <S.Footer>
+          <Icon iconBg="secondary" iconSize={40} onPress={handleGoToEvents} showLabel />
+        </S.Footer>
+      </S.Wrapper>
     </S.Container>
   )
 }

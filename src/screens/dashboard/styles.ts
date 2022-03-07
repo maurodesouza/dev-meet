@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components/native'
+import Animated from 'react-native-reanimated'
+
 import { Text } from '../../components'
 
 export const Container = styled.View`
@@ -8,8 +10,9 @@ export const Container = styled.View`
   `}
 `
 
-export const Wrapper = styled.View`
+export const Wrapper = styled(Animated.View)`
   ${({ theme }) => css`
+    justify-content: center;
     padding: 0 ${theme.spacings.large}px;
   `}
 `
@@ -44,13 +47,9 @@ export const WrapperContents = styled.View`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex: 1;
 `
 
-export const Footer = styled.View`
-  ${({ theme }) => css`
-    flex-shrink: 0;
-    padding: ${theme.spacings.large}px 0;
-    align-items: flex-end;
-  `}
+export const Footer = styled(Animated.View)`
+  flex-shrink: 0;
+  align-items: flex-end;
 `
