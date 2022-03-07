@@ -12,7 +12,15 @@ type IconProps = TouchableOpacityProps & {
   label?: string
 }
 
-const Icon = ({ showLabel = false, label = 'Próximo', iconBg = 'primary', icon = 'arrow-right', iconColor = 'white', iconSize = 48, ...rest }: IconProps) => {
+const Icon = ({
+    showLabel = false,
+    label = 'Próximo',
+    iconBg = 'primary',
+    icon = 'arrow-right',
+    iconColor = 'white',
+    iconSize = 48,
+    ...rest
+  }: IconProps) => {
   const theme = useTheme()
 
   return (
