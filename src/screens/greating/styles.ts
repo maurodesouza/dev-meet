@@ -5,7 +5,7 @@ export const Container = styled.View`
   ${({ theme }) => css`
     flex: 1;
     align-items: center;
-    padding: 0 ${theme.spacings.xxlarge}px;
+    padding: ${theme.spacings.xxxlarge}px ${theme.spacings.xxlarge}px 0;
   `}
 `
 

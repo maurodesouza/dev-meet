@@ -7,7 +7,7 @@ export const Container = styled.View`
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 ${theme.spacings.xxlarge}px;
+    padding: ${theme.spacings.xxxlarge}px ${theme.spacings.xxlarge}px 0;
   `}
 `
 

@@ -2,7 +2,10 @@ import styled, { css } from 'styled-components/native'
 import { Text } from '../../components'
 
 export const Container = styled.View`
+  ${({ theme }) => css`
     flex: 1;
+    padding-top: ${theme.spacings.xxxlarge}px;
+  `}
 `
 
 export const Wrapper = styled.View`
