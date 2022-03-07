@@ -85,11 +85,12 @@ const Counter = ({ dateCreated, dateStart, onFinishCounter }: CounterProps) => {
       <S.Counter>
         {intervals.map(({ time, label }) => {
           const display = hasSecondsRef.current ? counter[label as keyof TimerResult] : time
+          const fomatedLabel = label.toUpperCase().replace(/\w$/, '(s)')
 
           return (
           <S.Wrapper key={label}>
             <S.Time>{`0${display}`.slice(-2)}</S.Time>
-            <S.Label>{label}</S.Label>
+            <S.Label>{fomatedLabel}</S.Label>
           </S.Wrapper>
         )})}
       </S.Counter>
