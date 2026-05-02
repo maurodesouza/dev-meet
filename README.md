@@ -1,37 +1,34 @@
-
 <br />
 
 <div align="center" id="top">
   <img src="./.github/assets/brand.svg" alt="Dev Meet" />
-
-  &#xa0;
 </div>
 
 <p align="center">
-  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/maurodesouza/dev-meet?color=FF5100">
+  <img alt="Main project language" src="https://img.shields.io/github/languages/top/maurodesouza/dev-meet?color=FF5100">
 
-  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/maurodesouza/dev-meet?color=FF5100">
+  <img alt="Number of languages used" src="https://img.shields.io/github/languages/count/maurodesouza/dev-meet?color=FF5100">
 
-  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/maurodesouza/dev-meet?color=FF5100">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/maurodesouza/dev-meet?color=FF5100">
 
-  <img alt="Licença" src="https://img.shields.io/github/license/maurodesouza/dev-meet?color=FF5100">
+  <img alt="License" src="https://img.shields.io/github/license/maurodesouza/dev-meet?color=FF5100">
 </p>
 
 <p align="center">
-  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
   <a href="#sparkles-demo">Demo</a> &#xa0; | &#xa0;
-  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-pré-requisitos">Pré requisitos</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
-  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
-  <a href="https://github.com/maurodesouza" target="_blank">Autor</a>
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-prerequisites">Prerequisites</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-getting-started">Getting Started</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/maurodesouza" target="_blank">Author</a>
 </p>
 
-## :dart: Sobre ##
+## :dart: About
 
-O Dev Meet é um projeto que foi desenvolvido para o desafio da Tech da semana, que foi proposto pela [comunidade tech](https://discord.gg/wagxzStdcR) da [Rafaella Ballerini](https://github.com/rafaballerini)!
+Dev Meet is a project that was developed for the Tech of the Week challenge, proposed by the [tech community](https://discord.gg/wagxzStdcR) of [Rafaella Ballerini](https://github.com/rafaballerini)!
 
-O desafio consiste em criar um pequeno app para consumir uma api fake que fornece dados sobre eventos.
+The challenge consists of creating a small app to consume a fake API that provides data about events.
 
 <details>
   <summary>Layout</summary>
@@ -41,23 +38,23 @@ O desafio consiste em criar um pequeno app para consumir uma api fake que fornec
   <br>
 
   <div align="center">
-    <a align="center" href="https://www.figma.com/file/UgZj1C1DWJlVftvMLz1Aq9/Dev-Meet?node-id=1%3A326">Link para o design no Figma</a>
+    <a align="center" href="https://www.figma.com/file/UgZj1C1DWJlVftvMLz1Aq9/Dev-Meet?node-id=1%3A326">Link to the design on Figma</a>
   </div>
 
 </details>
 <br>
 
-Para fazer o app utilizei o [Expo](https://nextjs.org) + [Typescript](https://www.typescriptlang.org) ❤
+To build the app I used [Expo](https://nextjs.org) + [Typescript](https://www.typescriptlang.org) ❤
 
-## :sparkles: Demo ##
+## :sparkles: Demo
 
 <div align="center">
   <video src="https://user-images.githubusercontent.com/54520907/157106229-985c4240-6d79-40d0-ba79-c3846a6a591c.mp4" />
  </div>
 
-## :rocket: Tecnologias ##
+## :rocket: Technologies
 
-As principais ferramentas usadas na construção desse projeto:
+The main tools used in building this project:
 
 <a href="https://expo.io">
   <img width="50" title="Expo" alt="Expo" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/expo.svg">
@@ -79,73 +76,70 @@ As principais ferramentas usadas na construção desse projeto:
 <br>
 
 <details>
-  <summary>Ver todas</summary>
+  <summary>See all</summary>
 
   <br>
 
-  * [axios](https://github.com/axios/axios)
-  * [date-fns](https://date-fns.org)
-  * [expo-font](https://docs.expo.dev/guides/using-custom-fonts/)
-  * [react-native-svg](https://github.com/awesomejerry/react-native-qrcode-svg)
-  * [react-timer-hook](https://www.npmjs.com/package/react-timer-hook)
-  * [styled-components](https://styled-components.com)
-  * [@expo/vector-icons](https://docs.expo.dev/guides/icons/)
-  * [expo-linear-gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
-  * [react-native-webview](https://docs.expo.dev/versions/latest/sdk/webview/)
-  * [react-native-reanimated](https://docs.swmansion.com/react-native-reanimated/)
-  * [react-native-shimmer-placeholder](https://github.com/tomzaku/react-native-shimmer-placeholder)
+* [axios](https://github.com/axios/axios)
+* [date-fns](https://date-fns.org)
+* [expo-font](https://docs.expo.dev/guides/using-custom-fonts/)
+* [react-native-svg](https://github.com/awesomejerry/react-native-qrcode-svg)
+* [react-timer-hook](https://www.npmjs.com/package/react-timer-hook)
+* [styled-components](https://styled-components.com)
+* [@expo/vector-icons](https://docs.expo.dev/guides/icons/)
+* [expo-linear-gradient](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
+* [react-native-webview](https://docs.expo.dev/versions/latest/sdk/webview/)
+* [react-native-reanimated](https://docs.swmansion.com/react-native-reanimated/)
+* [react-native-shimmer-placeholder](https://github.com/tomzaku/react-native-shimmer-placeholder)
+
 </details>
 
-## :white_check_mark: Pré requisitos ##
+## :white_check_mark: Prerequisites
 
-Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com), [Node](https://nodejs.org/en/), [Json-server](https://www.npmjs.com/package/json-server) e a [CLI do expo](https://expo.io/tools#cli) instalados em sua maquina :computer:
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com), [Node](https://nodejs.org/en/), [Json-server](https://www.npmjs.com/package/json-server) and the [Expo CLI](https://expo.io/tools#cli) installed on your machine :computer:
 
-Opcional - [Ngrok](https://ngrok.com) para facilitar a conexão do nosso app com o servidor!
+Optional - [Ngrok](https://ngrok.com) to make it easier to connect your app to the server!
 
-Também vai precisar ter algum emulador ou o [app do expo](https://play.google.com/store/apps/details?id=host.exp.exponent) instalado no seu celular :iphone:
+You will also need to have an emulator or the [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent) installed on your phone :iphone:
 
-## :checkered_flag: Começando ##
+## :checkered_flag: Getting Started
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone https://github.com/maurodesouza/dev-meet
 
-# Entre na pasta
+# Enter the folder
 $ cd dev-meet
 
-# Instale as dependências
+# Install dependencies
 $ yarn
 
-# Inicie o servidor fake, vai abrir em <http://localhost:3000>
+# Start the fake server, it will run at <http://localhost:3000>
 $ json-server server.json
 
-# Crie um tunel utilizando o ngrok para expor o seu localhost na porta 3000 [OPCIONAL]
+# Create a tunnel using ngrok to expose your localhost on port 3000 [OPTIONAL]
 $ ~/ngrok http 3000
 
-# Entre em ./src/services/api e altere o baseURL, apontando para o seu servidor
+# Go to ./src/services/api and change the baseURL, pointing to your server
 
-# Para iniciar o projeto
+# To start the project
 $ yarn start
 
-# O app vai inicializar em <http://localhost:19002>
+# The app will run at <http://localhost:19002>
 ```
 
-Depois leia o QRCode com o seu [app do expo](https://play.google.com/store/apps/details?id=host.exp.exponent) ou rode no seu emulador.
+Then scan the QR Code using your [Expo app](https://play.google.com/store/apps/details?id=host.exp.exponent) or run it on your emulator.
 
-*OBS: Testado apenas em android*
+*NOTE: Tested only on Android*
 
-## :memo: Licença ##
+## :memo: License
 
-Este projeto está sob licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE.md) file for more details.
 
+Made with :heart: by <a href="https://github.com/maurodesouza" target="_blank">Mauro de Souza</a>
 
-Feito com :heart: por <a href="https://github.com/maurodesouza" target="_blank">Mauro de Souza</a>
+ 
 
+<a href="#top">Back to top</a>
 
-&#xa0;
-
-<a href="#top">Voltar para o topo</a>
-
-*Readme criado com [Simple Readme](https://marketplace.visualstudio.com/items?itemName=maurodesouza.vscode-simple-readme)*
-
-
+*README created with [Simple Readme](https://marketplace.visualstudio.com/items?itemName=maurodesouza.vscode-simple-readme)*
